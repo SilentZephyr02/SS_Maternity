@@ -21,6 +21,22 @@
 				top: 0;
 			}
 			footer{background-color:#42b254}
+
+			@media screen and (min-width: 768px){
+				.carousel {
+					margin: 1rem;
+				}
+				.carousel-inner {
+					height: auto;
+				}
+
+				.carousel-control-prev {
+					margin-left: -80px;
+				}
+				.carousel-control-next {
+					margin-right: -80px;
+				}
+			}
         </style>
 	</head>
 	<body>

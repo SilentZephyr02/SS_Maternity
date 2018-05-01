@@ -2,7 +2,12 @@
 Thumbs.db
 ehthumbs.db
 
-public
+public/*
+!public/assets/*
+!public/images
+
+
+
 vendor
 
 # Folder config file
