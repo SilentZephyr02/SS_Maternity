@@ -2,7 +2,7 @@
 
 namespace SilverStripe\Lessons;
 
-use Page;    
+use Page;
 
 class HomePage extends Page 
 {

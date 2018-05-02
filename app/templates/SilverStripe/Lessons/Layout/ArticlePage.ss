@@ -4,3 +4,46 @@
 <br>
 $Content
 $Form
+
+<div>
+Simple<input type="radio" onclick="javascript:sdcCheck();" name="sdc" id="simpleCheck" checked>
+Detailed<input type="radio" onclick="javascript:sdcCheck();" name="sdc" id="detailedCheck">
+Complex<input type="radio" onclick="javascript:sdcCheck();" name="sdc" id="complexCheck">
+</div>
+
+<% loop $ArticleParagraph %>
+<p>
+<h2 class="Simple">$Simple</h2>
+<div class="Detailed" style="display:none">$Detailed</div>
+<div class="Complex" style="display:none">$Complex</div>
+</p>
+<% end_loop %>
+
+<script>
+function sdcCheck() {
+    var simpleArray = document.getElementsByClassName("Simple");
+    var detailedArray = document.getElementsByClassName("Detailed");
+    var complexArray = document.getElementsByClassName("Complex");
+
+    var i;
+    if (document.getElementById('simpleCheck').checked) {
+        for (i = 0; i < simpleArray.length; i++) {
+            detailedArray[i].style.display = "none"
+            complexArray[i].style.display = "none"
+        }
+    }
+    else if (document.getElementById('detailedCheck').checked) {
+        for (i = 0; i < detailedArray.length; i++) {
+            detailedArray[i].style.display = "block"
+            complexArray[i].style.display = "none"
+        }
+    }
+    else if (document.getElementById('complexCheck').checked){
+        for (i = 0; i < complexArray.length; i++) {
+            detailedArray[i].style.display = "block"
+            complexArray[i].style.display = "block"
+        }
+    }
+    else {return}
+}
+</script>
