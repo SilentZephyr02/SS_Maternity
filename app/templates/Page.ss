@@ -35,8 +35,17 @@
 				}
 				.carousel-control-next {
 					margin-right: -80px;
-				}
+				}	
 			}
+				.carousel-caption {
+					color:black;
+					position: relative;
+					left: auto;
+					right: auto;
+				}
+				.carousel-indicators {
+					position: static;
+				}
         </style>
 	</head>
 	<body>
@@ -45,7 +54,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2 d-none d-lg-block no-padding">
-					<img src="./images/image-side.png" class="float-right sticky">
+					<img src="./images/image-side2.png" class="float-right sticky">
 				</div>
 				<!--Content-->
 				<div class="col-lg-8 active-col">
@@ -55,7 +64,7 @@
 						</div>
 				<!--Content-End-->
 				<div class="col-lg-2 d-none d-lg-block no-padding">
-					<img src="./images/image-side.png" class="float-left sticky">
+					<img src="./images/image-side2.png" class="float-left sticky">
 				</div>
 			</div>
 		</div>

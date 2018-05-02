@@ -9,13 +9,13 @@ $Form
                     <% loop $Children %>
                     <li data-target="#demo" data-slide-to=$Pos(0) 
                         <% if $First %>
-                        class="active"></li>
+                        class="active">
                         <% else %>
-                        ></li>
+                        >
                         <% end_if %>
+                        </li>
                     <% end_loop %>
                 </ul>
-
                 
                 <div class="carousel-inner">
                 <% loop $Children %>
@@ -27,6 +27,10 @@ $Form
                         <% with $Header.ScaleWidth(700) %>
                         <img class="img-fluid" src="$URL" alt="" width="$Width" height="$Height" />
                         <% end_with %>
+                        <div class="carousel-caption">
+                            $Content.FirstParagraph
+                            <a href="$Link" title="Read more on &quot;{$Title}&quot;">Read more &gt;&gt;</a>
+                        </div>
                     </div>
                 <% end_loop %>
                 </div>
