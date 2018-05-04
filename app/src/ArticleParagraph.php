@@ -25,6 +25,9 @@ class ArticleParagraph extends DataObject
 
   private static $versioned_gridfield_extensions = true;
 
+  private static $summary_fields = [
+    'Simple' => 'Sentence starter',
+];
 
   public function getCMSFields() 
   {
