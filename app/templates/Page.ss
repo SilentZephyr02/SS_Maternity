@@ -13,6 +13,7 @@
 			.no-padding {padding:0px}
 			.active-col {background-color: #90ee90;}
 			.nav-colour {background-color: #42b254;}
+			footer{background-color:#42b254}
 			.sky-colour {background-color:#00abc7;}
 			body{background-color:#90ee90}
 			img.sticky {
@@ -20,9 +21,8 @@
 				position: sticky;
 				top: 0;
 			}
-			footer{background-color:#42b254}
 
-			@media screen and (min-width: 768px){
+			@media screen and (min-width: 992px){
 				.carousel {
 					margin: 1rem;
 				}
@@ -35,17 +35,20 @@
 				}
 				.carousel-control-next {
 					margin-right: -80px;
-				}	
+				}
+				div.logo::after{					
+					content: url('./images/hbdhb-logo.png');
+				}
 			}
-				.carousel-caption {
-					color:black;
-					position: relative;
-					left: auto;
-					right: auto;
-				}
-				.carousel-indicators {
-					position: static;
-				}
+			.carousel-caption {
+				color:black;
+				position: relative;
+				left: auto;
+				right: auto;
+			}
+			.carousel-indicators {
+				position: static;
+			}
         </style>
 	</head>
 	<body>
