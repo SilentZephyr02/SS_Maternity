@@ -1,0 +1,11 @@
+@media screen and (min-width: 992px){
+    .verticalnavbar{
+        padding-top: 20vh;
+    }
+    .borderimg { 
+        background-image: url('../images/feet.png'); 
+        background-repeat: repeat-y;
+        background-position: right top;
+    }
+}
+.some-padding {padding:50px}
