@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\Lessons;
+namespace Pages;
   
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
