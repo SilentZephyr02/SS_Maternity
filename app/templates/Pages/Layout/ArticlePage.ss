@@ -15,49 +15,46 @@
             $Content
             $Form
 
-            <div>
-            Simple<input type="radio" onclick="javascript:sdcCheck();" name="sdc" id="simpleCheck" checked>
-            Detailed<input type="radio" onclick="javascript:sdcCheck();" name="sdc" id="detailedCheck">
-            Complex<input type="radio" onclick="javascript:sdcCheck();" name="sdc" id="complexCheck">
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#Simple">Simple</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#Detailed">Detailed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#Complex">Complex</a>
+                </li>
+            </ul>
+        
+
+            <div class="tab-content">
+                <div id="Simple" class="tab-pane active">
+                    <% loop $ArticleParagraph %>
+                    <p>
+                        <div class="Simple">$Simple</div>
+                    </p>
+                    <% end_loop %>
+                </div>
+                <div id="Detailed" class="tab-pane">
+                    <% loop $ArticleParagraph %>
+                    <p>
+                        <div class="Simple">$Simple</div>
+                        <div class="Detailed">$Detailed</div>
+                    </p>
+                    <% end_loop %>
+                </div>
+                <div id="Complex" class="tab-pane">
+                    <% loop $ArticleParagraph %>
+                    <p>
+                        <div class="Simple">$Simple</div>
+                        <div class="Detailed">$Detailed</div>
+                        <div class="Complex">$Complex</div>
+                    </p>
+                    <% end_loop %>
+                </div>
             </div>
-
-            <% loop $ArticleParagraph %>
-            <p>
-            <div class="Simple">$Simple</div>
-            <div class="Detailed" style="display:none">$Detailed</div>
-            <div class="Complex" style="display:none">$Complex</div>
-            <hr>
-            </p>
-            <% end_loop %>
-
-            <script>
-            function sdcCheck() {
-                var simpleArray = document.getElementsByClassName("Simple");
-                var detailedArray = document.getElementsByClassName("Detailed");
-                var complexArray = document.getElementsByClassName("Complex");
-
-                var i;
-                if (document.getElementById('simpleCheck').checked) {
-                    for (i = 0; i < simpleArray.length; i++) {
-                        detailedArray[i].style.display = "none"
-                        complexArray[i].style.display = "none"
-                    }
-                }
-                else if (document.getElementById('detailedCheck').checked) {
-                    for (i = 0; i < detailedArray.length; i++) {
-                        detailedArray[i].style.display = "block"
-                        complexArray[i].style.display = "none"
-                    }
-                }
-                else if (document.getElementById('complexCheck').checked){
-                    for (i = 0; i < complexArray.length; i++) {
-                        detailedArray[i].style.display = "block"
-                        complexArray[i].style.display = "block"
-                    }
-                }
-                else {return}
-            }
-            </script>
         </div>
     </div>
 </div>
