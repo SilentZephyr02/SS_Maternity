@@ -1,5 +1,10 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <div class="container-fluid nav-colour d-block d-lg-none">
         <% include NavBar %>
+    </div>
+    <div class="container-fluid nav-colour d-none d-lg-block text-center">
+        <img src="./images/hbdhb-logo">
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-3 borderimg">

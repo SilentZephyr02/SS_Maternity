@@ -23,9 +23,10 @@
 
             <% loop $ArticleParagraph %>
             <p>
-            <h2 class="Simple">$Simple</h2>
+            <div class="Simple">$Simple</div>
             <div class="Detailed" style="display:none">$Detailed</div>
             <div class="Complex" style="display:none">$Complex</div>
+            <hr>
             </p>
             <% end_loop %>
 
