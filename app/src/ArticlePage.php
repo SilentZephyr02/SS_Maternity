@@ -11,9 +11,11 @@ use Page;
 class ArticlePage extends Page
 {
     private static $db = [];
+    private static $can_be_root = false;
 
     private static $has_one = [
-        'Header' => Image::class
+        'Header' => Image::class,
+        'HomePage' => HomePage::class
     ];
 
     private static $owns = [
