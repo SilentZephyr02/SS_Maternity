@@ -18,43 +18,52 @@
 
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#Simple">Simple</a>
+                    <a onclick="javascript:sdcCheck('Simple');" class="nav-link active" data-toggle="tab" id="SimpleTab" href="#Simple">Simple</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#Detailed">Detailed</a>
+                    <a onclick="javascript:sdcCheck('Detailed');" class="nav-link" data-toggle="tab" id="DetailedTab" href="#Detailed">Detailed</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#Complex">Complex</a>
+                    <a onclick="javascript:sdcCheck('Complex');" class="nav-link" data-toggle="tab" id="ComplexTab" href="#Complex">Complex</a>
                 </li>
             </ul>
-        
 
-            <div class="tab-content">
-                <div id="Simple" class="tab-pane active">
-                    <% loop $ArticleParagraph %>
-                    <p>
-                        <div class="Simple">$Simple</div>
-                    </p>
-                    <% end_loop %>
-                </div>
-                <div id="Detailed" class="tab-pane">
-                    <% loop $ArticleParagraph %>
-                    <p>
-                        <div class="Simple">$Simple</div>
-                        <div class="Detailed">$Detailed</div>
-                    </p>
-                    <% end_loop %>
-                </div>
-                <div id="Complex" class="tab-pane">
-                    <% loop $ArticleParagraph %>
-                    <p>
-                        <div class="Simple">$Simple</div>
-                        <div class="Detailed">$Detailed</div>
-                        <div class="Complex">$Complex</div>
-                    </p>
-                    <% end_loop %>
-                </div>
-            </div>
+            <% loop $ArticleParagraph %>	
+            <p>	           
+            <div class="Simple">$Simple</div>	
+            <div class="Detailed" style="display:none">$Detailed</div>	
+            <div class="Complex" style="display:none">$Complex</div>	
+            <hr>	
+            </p>	
+            <% end_loop %>
+
+            <script>
+                function sdcCheck(option) {
+                    var simpleArray = document.getElementsByClassName("Simple");
+                    var detailedArray = document.getElementsByClassName("Detailed");
+                    var complexArray = document.getElementsByClassName("Complex");
+                    var i;
+                    if (option == "Simple") {
+                        for (i = 0; i < simpleArray.length; i++) {
+                            detailedArray[i].style.display = "none"
+                            complexArray[i].style.display = "none"
+                        }
+                    }
+                    else if (option == "Detailed") {
+                        for (i = 0; i < detailedArray.length; i++) {
+                            detailedArray[i].style.display = "block"
+                            complexArray[i].style.display = "none"
+                        }
+                    }
+                    else if (option == "Complex"){
+                        for (i = 0; i < complexArray.length; i++) {
+                            detailedArray[i].style.display = "block"
+                            complexArray[i].style.display = "block"
+                        }
+                    }
+                    else {return}
+                }
+            </script>
         </div>
     </div>
 </div>
