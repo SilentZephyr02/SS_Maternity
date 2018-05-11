@@ -3,9 +3,8 @@
         padding-top: 20vh;
     }
     .borderimg { 
-        background-image: url('../images/feet.png'); 
-        background-repeat: repeat-y;
-        background-position: right top;
+        background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side3.png') repeat-y right top; 
+        background-size: 100% ,auto;
     }
 }
 .some-padding {padding:50px}

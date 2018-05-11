@@ -1,8 +1,7 @@
 <% include NavBar %>
 <div class="container">
     <div class="row">
-        <div class="col-lg-2 d-none d-lg-block no-padding">
-            <img src="./images/image-side2.png" class="float-right sticky">
+        <div class="col-lg-2 d-none d-lg-block borderimg">
         </div>
         <div class="col-lg-10 active-col">
             <br>
