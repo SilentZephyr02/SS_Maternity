@@ -6,6 +6,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\CMS\Model\SiteTree;
 use Page;
 
 class ArticlePage extends Page
@@ -44,4 +45,12 @@ class ArticlePage extends Page
 
         return $fields;
     }
+
+    function nextPage(){
+        $articlepages = SiteTree::get()->filter([
+            'ParentID' => $this->ParentID,
+            'Sort:GreaterThan' =>$this->Sort
+            ])->sort('Sort', 'ASC');
+        return $articlepages[0];
+        }
 }

@@ -8,33 +8,42 @@
             <h1>$Title</h1>
         
             <% with $Header.ScaleWidth(750) %>
-            <img class="img-fluid" src="$URL" alt="" width="$Width" height="$Height" />
+            <img class="img-fluid mx-auto d-block" src="$URL" alt="" width="$Width" height="$Height" />
             <% end_with %>
             <br>
             $Content
             $Form
 
 
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                    <a onclick="javascript:sdcCheck('Simple');" class="nav-link active" data-toggle="tab" id="SimpleTab" href="#Simple">Simple</a>
-                </li>
-                <li class="nav-item">
-                    <a onclick="javascript:sdcCheck('Detailed');" class="nav-link" data-toggle="tab" id="DetailedTab" href="#Detailed">Detailed</a>
-                </li>
-                <li class="nav-item">
-                    <a onclick="javascript:sdcCheck('Complex');" class="nav-link" data-toggle="tab" id="ComplexTab" href="#Complex">Complex</a>
-                </li>
-            </ul>
+            <div class="myNavtab">
+                <ul class="nav nav-tabs blacknav myNavtab" role="tablist">
+                    <li class="nav-item">
+                        <a onclick="javascript:sdcCheck('Simple');" class="nav-link active" data-toggle="tab" id="SimpleTab" href="#Simple">Simple</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="javascript:sdcCheck('Detailed');" class="nav-link" data-toggle="tab" id="DetailedTab" href="#Detailed">Detailed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="javascript:sdcCheck('Complex');" class="nav-link" data-toggle="tab" id="ComplexTab" href="#Complex">Complex</a>
+                    </li>
+                </ul>
 
-            <% loop $ArticleParagraph %>	
-            <p>	           
-            <div class="Simple">$Simple</div>	
-            <div class="Detailed" style="display:none">$Detailed</div>	
-            <div class="Complex" style="display:none">$Complex</div>	
-            <hr>	
-            </p>	
-            <% end_loop %>
+                
+                <% loop $ArticleParagraph %>	
+                <div>	           
+                    <div class="Simple">$Simple</div>	
+                    <div class="Detailed" style="display:none">$Detailed</div>	
+                    <div class="Complex" style="display:none">$Complex</div>	
+                    <hr>	
+                </div>	
+                <% end_loop %>
+            </div>
+
+            <% if $nextPage %>
+            <a type="button" class="btn" href="$nextPage.Link" role="button">
+            Continue to $nextPage.Title
+            </a>
+            <% end_if %>
 
             <script>
                 function sdcCheck(option) {
