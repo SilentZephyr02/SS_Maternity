@@ -8,17 +8,29 @@ img.sticky {
     top: 0;
 }
 
+@media screen and (max-width: 992px){
+    .borderimg { 
+        background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side3.png') repeat-y right top; 
+        background-size: 750% ,100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .borderimg { 
+        background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side3.png') repeat-y right top; 
+        background-size: 75% ,75%;
+    }
+}
+
 @media screen and (min-width: 992px){
     div.logo::after{					
         content: url('../images/hbdhb-logo.png');
     }
-
-}
-
     .borderimg { 
         background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side3.png') repeat-y right top; 
-        background-size: 100% ,auto;
+        background-size: 50% ,auto;
     }
+}
 
 .carousel-caption {
     color:black;
