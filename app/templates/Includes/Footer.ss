@@ -18,7 +18,7 @@
                 <h5 class="mb-4 mt-3">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="/admin">Admin Login</a>
+                        <a href="./admin">Admin Login</a>
                     </li>
                     <li>
                         <a href="#!">Link 2</a>
