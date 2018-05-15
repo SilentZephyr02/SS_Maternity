@@ -15,7 +15,7 @@
             </div>
             
             
-            <div class="col-9 no-padding">
+            <div class="col-lg-9 col-md-12 no-padding">
                 <div id="$URLSegment" class="container">
                 <h1>Welcome</h1>
                     $Content
@@ -23,10 +23,10 @@
             <% loop $Menu(2) %>
                 <div id="$URLSegment" class="container">
                     <h2>$Title</h2>
-                    <% with $Header.ScaleWidth(750) %>
-                    <img class="img-fluid" src="$URL" alt="" width="$Width" height="$Height" />
+                    <% with $Header.ScaleMaxWidth(750) %>
+                    <img class="img-fluid mx-auto d-block" src="$URL" alt="" width="$Width" height="$Height" />
                     <% end_with %>
-                    <div>
+                    <div class="homeArticle">
                         $Content.FirstParagraph
                         <br>
                         <a href="$Link" type="button" class="btn btn-success" role="button" title="Read more on &quot;{$Title}&quot;">Read more &gt;&gt;</a>

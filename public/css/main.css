@@ -16,6 +16,10 @@ img.sticky {
     top: 0;
 }
 
+.homeArticle{
+    margin: 10px 0px 0px 0px;
+}
+
 @media screen and (min-width: 768px){
     .borderimg { 
         background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side.png') repeat-y right top; 

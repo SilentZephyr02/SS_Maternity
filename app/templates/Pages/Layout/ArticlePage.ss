@@ -7,7 +7,7 @@
             <br>
             <h1>$Title</h1>
         
-            <% with $Header.ScaleWidth(750) %>
+            <% with $Header.ScaleMaxWidth(750) %>
             <img class="img-fluid mx-auto d-block" src="$URL" alt="" width="$Width" height="$Height" />
             <% end_with %>
             <br>
