@@ -12,11 +12,14 @@ img.sticky {
     div.logo::after{					
         content: url('../images/hbdhb-logo.png');
     }
+
+}
+
     .borderimg { 
         background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side3.png') repeat-y right top; 
         background-size: 100% ,auto;
     }
-}
+
 .carousel-caption {
     color:black;
     position: relative;

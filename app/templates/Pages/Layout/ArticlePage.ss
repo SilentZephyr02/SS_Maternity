@@ -1,9 +1,9 @@
 <% include NavBar %>
 <div class="container">
     <div class="row">
-        <div class="col-lg-2 d-none d-lg-block borderimg">
+        <div class="col-3 borderimg">
         </div>
-        <div class="col-lg-10 active-col">
+        <div class="col-9 active-col">
             <br>
             <h1>$Title</h1>
         
