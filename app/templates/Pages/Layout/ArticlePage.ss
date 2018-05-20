@@ -1,9 +1,9 @@
 <% include NavBar %>
 <div class="container">
     <div class="row">
-        <div class="col-2 borderimg">
+        <div class="col-2 d-none d-lg-block borderimg">
         </div>
-        <div class="col-10 active-col">
+        <div class="col active-col">
             <br>
             <h1>$Title</h1>
         
@@ -28,9 +28,10 @@
                     </li>
                 </ul>
 
-                
+                <div class="pt-4"></div>
+
                 <% loop $ArticleParagraph %>	
-                <div>	           
+                <div class="linkColour">	           
                     <div class="Simple">$Simple</div>	
                     <div class="Detailed" style="display:none">$Detailed</div>	
                     <div class="Complex" style="display:none">$Complex</div>	
