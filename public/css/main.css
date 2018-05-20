@@ -40,8 +40,8 @@ img.sticky {
         display: block!important;
     }
     .borderimg { 
-        background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side.png') repeat-y right top; 
-        background-size: 75% ,auto;
+        background: url('../images/lady.png') no-repeat right bottom, url('../images/image-house.png') no-repeat right top, url('../images/image-side.png') repeat-y right top; 
+        background-size: 75% ,100%,auto;
     }
     .verticalnavbar{
         padding-top: 0px;

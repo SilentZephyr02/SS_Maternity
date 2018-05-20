@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-3 d-none d-lg-block borderimg">
                 <nav class="verticalnavbar navbar blacknav sticky-top justify-content-center" id="myScrollspy">
+                <img class="img-fluid" src="./images/image-house.png" />
                     <ul class="nav nav-pills flex-column transparent" id="verticalnavbar">
                         <% loop $Menu(2) %>
                         <li class="nav-item">
@@ -17,15 +18,19 @@
             
             <div class="col-lg-9 col-md-12 no-padding">
                 <div id="$URLSegment" class="container">
-                <h1>Welcome</h1>
+                <h1>Welcome to the Healthy Birth Pathway</h1>
                     $Content
+                    <img class="img-fluid" src="./images/lady2.png" width="100px" />
+                    <img class="img-fluid" src="./images/lady3.png" width="100px" />
+                    <img class="img-fluid" src="./images/lady4.png" width="100px" />
+                    <img class="img-fluid" src="./images/lady5.png" width="100px" />
+                    <img class="img-fluid" src="./images/lady6.png" width="100px" />
+                    <img class="img-fluid" src="./images/lady7.png" width="100px" />
                 </div>
             <% loop $Menu(2) %>
                 <div id="$URLSegment" class="container">
                     <h2>$Title</h2>
-                    <% with $Header.ScaleMaxWidth(750) %>
-                    <img class="img-fluid mx-auto d-block" src="$URL" alt="" width="$Width" height="$Height" />
-                    <% end_with %>
+
                     <div class="homeArticle">
                         $Content.FirstParagraph
                         <br>
