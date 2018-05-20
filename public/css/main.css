@@ -43,6 +43,10 @@ img.sticky {
         background: url('../images/lady.png') no-repeat right bottom, url('../images/image-house.png') no-repeat right top, url('../images/image-side.png') repeat-y right top; 
         background-size: 75% ,100%,auto;
     }
+    .borderimgHome { 
+        background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side.png') repeat-y right top; 
+        background-size: 50%,auto;
+    }
     .verticalnavbar{
         padding-top: 0px;
     }
@@ -56,7 +60,7 @@ img.sticky {
 }
 
 .transparent{
-    background-color: rgba(66, 178, 84, 0.8);
+    background-color: rgba(66, 178, 84, 0.9);
 }
 
 #verticalnavbar .nav-link.active {
@@ -87,6 +91,6 @@ div.myNavtab div{
 
 a.current{
     font-weight: bold;
-    color: rgba(0,0,0) !important;
+    color: #000000 !important;
 }
 

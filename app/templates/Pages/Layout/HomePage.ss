@@ -1,22 +1,30 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
         <% include NavBar %>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-3 d-none d-lg-block borderimg">
-                <nav class="verticalnavbar navbar blacknav sticky-top justify-content-center" id="myScrollspy">
-                <img class="img-fluid" src="./images/image-house.png" />
-                    <ul class="nav nav-pills flex-column transparent" id="verticalnavbar">
-                        <% loop $Menu(2) %>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#$URLSegment" title="Go to $Title section">$MenuTitle</a>
-                        </li>
-                        <% end_loop %>
-                    </ul>
-                </nav>
+            <div class="col-3 d-none d-lg-block borderimgHome">
+                <div class="row sticky-top justify-content-center" id="myScrollspy">
+                    <div class="col">
+                        <nav class="verticalnavbar navbar blacknav">                  
+                            <ul class="nav nav-pills flex-column transparent" id="verticalnavbar">
+                                <% loop $Menu(2) %>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#$URLSegment" title="Go to $Title section">$MenuTitle</a>
+                                </li>
+                                <% end_loop %>
+                            </ul>
+                        </nav>
+                    </div>
+                        
+                    <div class="col">
+                        <img class="img-fluid " src="./images/image-house.png" style='object-fit: contain'/>
+                    </div>
+                </div>
             </div>
             
             
-            <div class="col-lg-9 col-md-12 no-padding">
+            
+            <div class="col-lg-6 col-md-12 no-padding">
                 <div id="$URLSegment" class="container">
                 <h1>Welcome to the Healthy Birth Pathway</h1>
                     $Content
@@ -44,6 +52,10 @@
             Begin your Healthy Birth Pathway
             </a>
             <% end_if %>
+            </div>
+
+            <div class="col-3 d-none d-lg-block">
+
             </div>
         </div>
     </div>
