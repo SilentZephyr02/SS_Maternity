@@ -45,7 +45,7 @@ img.sticky {
     }
     .borderimgHome { 
         background: url('../images/lady.png') no-repeat right bottom, url('../images/image-side.png') repeat-y right top; 
-        background-size: 50%,auto;
+        background-size: 30%,auto;
     }
     .verticalnavbar{
         padding-top: 0px;

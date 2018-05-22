@@ -2,10 +2,10 @@
         <% include NavBar %>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 d-none d-lg-block borderimgHome">
+            <div class="col-4 d-none d-lg-block borderimgHome">
                 <div class="row sticky-top justify-content-center" id="myScrollspy">
-                    <div class="col">
-                        <nav class="verticalnavbar navbar blacknav">                  
+                    <div class="col px-0">
+                        <nav class="verticalnavbar navbar blacknav px-0">                  
                             <ul class="nav nav-pills flex-column transparent" id="verticalnavbar">
                                 <% loop $Menu(2) %>
                                 <li class="nav-item">
@@ -16,8 +16,9 @@
                         </nav>
                     </div>
                         
-                    <div class="col">
-                        <img class="img-fluid " src="./images/image-house.png" style='object-fit: contain'/>
+                    <div class="col px-1">
+                        <img class="img-fluid d-none d-xl-block" src="./images/image-house.png" style='  max-width: 90%'/>
+                        <img class="img-fluid d-none d-lg-block d-xl-none" src="./images/image-house.png" />
                     </div>
                 </div>
             </div>
@@ -26,7 +27,6 @@
             
             <div class="col-lg-6 col-md-12 no-padding">
                 <div id="$URLSegment" class="container">
-                <h1>Welcome to the Healthy Birth Pathway</h1>
                     $Content
                     <img class="img-fluid" src="./images/lady2.png" width="100px" />
                     <img class="img-fluid" src="./images/lady3.png" width="100px" />
@@ -54,7 +54,7 @@
             <% end_if %>
             </div>
 
-            <div class="col-3 d-none d-lg-block">
+            <div class="col-2 d-none d-lg-block">
 
             </div>
         </div>
