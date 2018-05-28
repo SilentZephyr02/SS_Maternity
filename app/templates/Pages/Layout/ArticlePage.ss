@@ -15,9 +15,9 @@
             $Form
 
 
-            <div class="myNavtab">
-                <ul class="nav nav-tabs blacknav myNavtab" role="tablist">
-                    <li class="nav-item">
+            <div class="article">
+                <ul class="nav nav-tabs blacknav myNavtab" id="nav-ul" role="tablist">
+                    <li class="nav-item" >
                         <a onclick="javascript:sdcCheck('Simple');" class="nav-link active" data-toggle="tab" id="SimpleTab" href="#Simple">Simple</a>
                     </li>
                     <li class="nav-item">
@@ -31,7 +31,7 @@
                 <div class="pt-4"></div>
 
                 <% loop $ArticleParagraph %>	
-                <div class="linkColour">	           
+                <div>	           
                     <div class="Simple">$Simple</div>	
                     <div class="Detailed" style="display:none">$Detailed</div>	
                     <div class="Complex" style="display:none">$Complex</div>	

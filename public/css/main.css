@@ -68,33 +68,29 @@ img.sticky {
     background-color:#90ee90 !important;
 }
 
-ul li a {
+#nav-ul li a {
+    background-color: lightgrey;
     color: black;
 }
 
-.linkColour  a { 
-    color: #007bff;
-    background-color: transparent !important;
-}
-
-.myNavtab li a {
-    background-color: lightgrey;
+#nav-ul li a.active {
+    background-color: #f0f0f0!important;
+    border-color: #dee2e6 #dee2e6 #f0f0f0!important;
 }
 
 .nav-link{
     padding: .4rem .5rem;
 }
 
-div.myNavtab{
-    word-wrap: break-word;
-    background-color: white;
-}
-
-div.myNavtab div{
-    padding: 0px 10px;
-}
-
 a.current{
     color: #000000 !important;
 }
 
+div.article{
+    word-wrap: break-word;
+    background-color: #f0f0f0;
+}
+
+div.article div{
+    padding: 0px 10px;
+}
